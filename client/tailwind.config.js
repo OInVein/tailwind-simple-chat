@@ -49,6 +49,26 @@ module.exports = {
             borderColor: 'transparent transparent rgb(256, 256, 256) rgb(256, 256, 256)',
           },
         },
+        shake: {
+          '0%': {
+            transform: 'rotate(-3deg)',
+          },
+          '20%': {
+            transform: 'rotate(3deg)',
+          },
+          '40%': {
+            transform: 'rotate(-2deg)',
+          },
+          '60%': {
+            transform: 'rotate(2deg)',
+          },
+          '80%': {
+            transform: 'rotate(-1deg)',
+          },
+          '100%': {
+            transform: 'rotate(0deg)',
+          },
+        },
         typing: {
           from: {
             width: 0,
@@ -57,11 +77,23 @@ module.exports = {
             width: '100%',
           },
         },
+        slideFromLeft: {
+          from: {
+            marginLeft: '-20px',
+            opacity: '0',
+          },
+          to: {
+            marginLeft: '0',
+            opacity: '1',
+          },
+        }
       },
       animation: {
         wave: 'wave 10s linear infinite',
         chatBackground: 'chatBackground .5s linear forwards',
         angleBackground: 'angleBackground .5s linear forwards',
+        shake: 'shake .5s linear forwards',
+        slideFromLeft: 'slideFromLeft .5s linear forwards',
         ['typing-1500']: 'typing 1.5s steps(44, end)',
         ['typing-3000']: 'typing 3s steps(44, end)',
       },
