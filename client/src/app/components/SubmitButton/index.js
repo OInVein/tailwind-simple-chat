@@ -7,7 +7,7 @@ const SubmitButton = forwardRef(({ status, onSubmit }, ref) => (
       data-testid="submitButton"
       ref={ref}
       disabled={status}
-      className="outline-none cursor-pointer w-full p-4 rounded-md text-white bg-orange-400 transition motion-safe:hover:scale-105 sm:motion-safe:hover:scale-102"
+      className="outline-none cursor-pointer w-full p-4 rounded-md text-white bg-orange-400 transition motion-safe:hover:scale-105 sm:motion-safe:hover:scale-102 tracking-wider"
       // className={status === 'disabled' ? styles.disabled : ''}
       value="Join"
       type="button"

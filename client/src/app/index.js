@@ -53,12 +53,12 @@ const App = () => {
   const { hasLogin } = state;
 
   const mainClassName = (() => {
-    const defaultClassName= 'w-full h-full md:w-3/4 xl:w-1/2 md:h-[85%] md:rounded-xl relative';
+    const defaultClassName= 'w-full h-full md:w-3/4 xl:w-1/2 md:h-[85%] md:rounded-xl relative tracking-wider';
     if (hasLogin) {
       const chatClassName = `
         ${defaultClassName}
         ${isLast ? 'flex items-center justify-center' : ''}
-        animate-chatBackground md:tracking-wider
+        animate-chatBackground
       `;
       return chatClassName;
     }

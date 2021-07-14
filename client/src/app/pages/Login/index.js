@@ -36,11 +36,11 @@ const Login = ({ setLoginStatus, isLast, setIsLast }) => {
     ? <Greetings text={nickName} />
     : (
       <>
-        <h1 className="w-full h-1/5 md:h-1/4 xl:h-1/5 flex justify-center items-center whitespace-nowrap font-bold text-shadow-md text-white text-4xl sm:text-5xl">
+        <h1 className="w-full h-1/5 md:h-1/4 xl:h-1/5 flex justify-center items-center whitespace-nowrap font-medium text-shadow-md text-white text-3xl md:text-4xl">
           CHAT ROOM
         </h1>
         <Greetings />
-        <form data-testid="loginForm" onSubmit={onSubmit} className="w-full h-1/3 md:h-5/12 flex justify-center flex-col text-2xl sm:text-3xl gap-4 md:gap-6 z-10">
+        <form data-testid="loginForm" onSubmit={onSubmit} className="w-full h-1/3 md:h-5/12 flex justify-center flex-col text-2xl md:text-3xl gap-6 z-10">
           <NicknameInput
             ref={nicknameInputRef}
             value={nickName}
