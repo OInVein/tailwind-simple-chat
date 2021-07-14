@@ -86,7 +86,17 @@ module.exports = {
             marginLeft: '0',
             opacity: '1',
           },
-        }
+        },
+        rotate360: {
+          from: {
+            transform: 'rotate(0deg)',
+            opacity: '.6',
+          },
+          to: {
+            transform: 'rotate(360deg)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         wave: 'wave 10s linear infinite',
@@ -94,6 +104,7 @@ module.exports = {
         angleBackground: 'angleBackground .5s linear forwards',
         shake: 'shake .5s linear forwards',
         slideFromLeft: 'slideFromLeft .5s linear forwards',
+        rotate360: 'rotate360 3s linear infinite',
         ['typing-1500']: 'typing 1.5s steps(44, end)',
         ['typing-3000']: 'typing 3s steps(44, end)',
       },

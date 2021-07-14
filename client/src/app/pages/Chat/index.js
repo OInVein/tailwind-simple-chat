@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Chat = (props) => {
   return (
-    <main className="relative w-full h-full md:w-3/4 xl:w-1/2 md:h-5/6 md:rounded-xl animate-chatBackground md:tracking-wider">
+    <>
       <div className="absolute top-0 right-0 left-0 bottom-[72px]">
         <div className="w-full h-full p-2 py-0 sm:p-3 sm:py-0 text-lg flex flex-col justify-start overflow-y-auto">
           <div className="w-full text-center text-white font-medium flex justify-center animate-shake mt-auto">
@@ -127,7 +127,7 @@ const Chat = (props) => {
           />
         </div>
       </form>
-    </main>
+    </>
   );
 };
 
