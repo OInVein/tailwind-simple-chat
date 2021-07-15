@@ -24,7 +24,7 @@ Greetings.defaultProps = {
 export default Greetings;
 
 const Greeting = ({ isDone, words }) => (
-  <div className={`relative left-3 rounded-lg rounded-bl-none bg-orange-400 p-4 w-max animate-slideFromLeft after:content after:absolute after:block after:w-0 after:h-0 after:-left-3 after:border-8 after:common-message-border-angle after:bottom-0`}>
+  <div className={`relative left-3 rounded-lg rounded-bl-none bg-orange-400 p-4 w-max animate-slideFromLeft after:content after:absolute after:block after:w-0 after:h-0 after:left-[-15px] after:skew-x-[25deg] after:border-[10px] after:common-message-border-angle after:bottom-0`}>
     <h2 className={`${!isDone ? 'animate-typing-1500' : ''} overflow-hidden whitespace-nowrap mx-0 my-auto`}>
       {words}
     </h2>

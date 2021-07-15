@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useReducer, useRef, useCallback } from 'react';
 import { io } from 'socket.io-client';
 import { withMainWrapper, Loading } from './components';
 import { LoginPage, ChatPage } from './pages';
@@ -16,6 +16,9 @@ const App = () => {
   const [state, dispatch] = useReducer(mainReducer, mainState);
   const { nickName, webSocket, isLoading, isLast, hasLogin } = state;
   const nickNameRef = useRef();
+  const emitMessage = useCallback((message) => {
+    webSocket.emit('send', message);
+  }, [webSocket]);
 
   useEffect(() => {
     nickNameRef.current = nickName;
@@ -104,9 +107,6 @@ const App = () => {
     if (!id) return <Loading />;
 
     const { allMessages } = state;
-    const emitMessage = (message) => {
-      webSocket.emit('send', message);
-    };
     return (
       <ChatPage
         id={id}

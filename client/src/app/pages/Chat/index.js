@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, memo } from 'react';
 import PropTypes from 'prop-types';
 import { Dialog, SendMessageForm } from '../../components';
 import { ChatFormProvider } from '../../contexts';
 import { scrollToBottom } from '../../utils';
 
-const Chat = ({ id, emitMessage, allMessages }) => {
+const Chat = memo(({ id, emitMessage, allMessages }) => {
   const [message, setMessage] = useState('');
   const dialogRef = useRef();
   const messageFormRef = useRef();
@@ -56,7 +56,9 @@ const Chat = ({ id, emitMessage, allMessages }) => {
       </ChatFormProvider>
     </>
   );
-};
+});
+
+Chat.displayName = 'Chat';
 
 Chat.propTypes = {
   id: PropTypes.string.isRequired,

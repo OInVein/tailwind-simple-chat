@@ -81,18 +81,24 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
       >
         {(() => {
           if (isAliveMessage) {
-            const messageClassName = isOther
-              ? `
-                relative break-all max-w-[50%] text-justify text-white bg-orange-400
-                border-solid border-2 border-orange-400 rounded-lg ml-2 p-2
-                ${shouldShowDetail ? 'after:content after:absolute after:block after:w-0 after:h-0 after:left-[-12px] after:bottom-[-2px] after:border-8 after:common-message-border-angle' : ''}
-              `
-              : `
-                relative break-all max-w-[50%] text-justify text-orange bg-transparent
-                border-solid border-2 border-orange-400
-                rounded-lg mr-2 p-2
-                ${shouldShowDetail ? 'rounded-br-none before:content before:absolute before:block before:w-0 before:h-0 before:right-[-12px] before:bottom-[-2px] before:border-[6px] before:chat-message-border-angle-my-out after:content after:absolute after:block after:w-0 after:h-0 after:right-[-7px] after:border-[6px] after:bottom-[0px] after:chat-message-border-angle-my-in' : ''}
+            const messageClassName = (() => {
+              const defaultMessageClass = 'relative break-all max-w-[50%] text-justify border-solid border-2 border-orange-400 rounded-lg p-2';
+              if (isOther) {
+                const detailClass = shouldShowDetail ? 'after:content after:absolute after:block after:w-0 after:h-0 after:left-[-12px] after:bottom-[-2px] after:skew-x-[20deg] after:border-8 after:common-message-border-angle' : '';
+                return `
+                  ml-2 text-white bg-orange-400
+                  ${defaultMessageClass}
+                  ${detailClass}
+                `;
+              }
+
+              const detailClass = shouldShowDetail ? 'rounded-br-none before:content before:absolute before:block before:w-0 before:h-0 before:right-[-11px] before:skew-x-[-20deg] after:skew-x-[-20deg] before:bottom-[-2px] before:border-[6px] before:chat-message-border-angle-my-out after:content after:absolute after:block after:w-0 after:h-0 after:right-[-7px] after:border-[6px] after:bottom-[0px] after:chat-message-border-angle-my-in' : '';
+              return `
+                mr-2 text-orange bg-transparent
+                ${defaultMessageClass}
+                ${detailClass}
               `;
+            })();
             return (
               <>
                 {shouldShowDetail && (
