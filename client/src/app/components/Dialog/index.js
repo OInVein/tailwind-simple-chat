@@ -1,9 +1,4 @@
-import React, {
-  useRef,
-  useEffect,
-  useImperativeHandle,
-  forwardRef,
-} from 'react';
+import { useRef, useEffect, useImperativeHandle, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { scrollToBottom, formatDate } from '../../utils';
 import { DIALOG_MESSAGE } from '../../constants';

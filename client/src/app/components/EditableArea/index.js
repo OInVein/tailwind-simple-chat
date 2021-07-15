@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useContext, useRef } from 'react';
+import { useEffect, useContext, useRef } from 'react';
 import { ChatFormContext } from '../../contexts';
 import { scrollToBottom, focusElement, isMobile } from '../../utils';
 
