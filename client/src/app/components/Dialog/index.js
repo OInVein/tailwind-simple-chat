@@ -30,18 +30,20 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
     dialogContainerScrollToBottom();
   }, [allMessages]);
 
-  const alterClassName = ({ isOther, isFirst, isAliveMessage, shouldShowDetail }) => {
-    const firstOneClass = isFirst ? 'mt-auto': '';
+  const alterClassName = ({ isOther, isFirst, isLast, isAliveMessage, shouldShowDetail }) => {
+    const firstElemClass = isFirst ? 'mt-auto': '';
+    const lastElemClass = isLast ? 'pb-0' : '';
     if (isAliveMessage) {
       return `
         ${isOther ? 'items-start' : 'items-end'}
         ${shouldShowDetail ? '' : 'pt-0'}
-        ${firstOneClass} w-full py-2
+        ${firstElemClass} w-full py-2
+        ${lastElemClass}
         text-center text-orange-400 flex flex-col gap-2
       `;
     }
 
-    return `${firstOneClass} w-full text-center text-white flex justify-center animate-shake`;
+    return `${firstElemClass} ${lastElemClass} py-2 w-full text-center text-white flex justify-center animate-shake`;
   };
 
   const renderAllMessages = allMessages.map(({
@@ -53,6 +55,7 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
   }, idx) => {
     const isOther = perId !== id;
     const isFirst = idx === 0;
+    const isLast = idx === allMessages.length - 1;
     const isAliveMessage = !isNew && !isLeaving;
     const sendTime = formatDate(date);
     const displayTime = sendTime.substr(5);
@@ -71,10 +74,9 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
       <div
         key={`${perId}-${date}`}
         className={alterClassName({
-          isLastUser: isNew,
-          isLeavingUser: isLeaving,
           isOther,
           isFirst,
+          isLast,
           isAliveMessage,
           shouldShowDetail,
         })}
@@ -118,7 +120,7 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
           }
 
           const { className, textMessage } = (() => {
-            const defaultClass = 'my-2 p-2 border border-solid rounded-lg';
+            const defaultClass = 'p-2 border border-solid rounded-lg';
             if (isNew) {
               const { JUST_COME } = DIALOG_MESSAGE;
               return {
