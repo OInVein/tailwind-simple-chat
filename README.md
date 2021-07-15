@@ -1,6 +1,6 @@
-# React Simple Chat
+# Tailwind Simple Chat
 
-demo 👉👉👉 https://react-simple-chat-client.herokuapp.com/
+demo 👉👉👉 https://tailwind-simple-chat-client.herokuapp.com/
 
 ## 1) Install
 
