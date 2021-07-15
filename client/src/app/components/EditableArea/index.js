@@ -48,7 +48,7 @@ const EditableArea = () => {
 
   return (
     <div
-      className="w-full max-h-28 mr-14 text-orange-400 rounded-md outline-none p-2 border-2 border-solid border-orange-400 animate-chatBackground overflow-y-auto text-xl transition focus:ring-2 focus:ring-orange-300"
+      className="w-full max-h-28 mr-14 text-orange-400 rounded-lg outline-none p-2 border-2 border-solid border-orange-400 animate-chatBackground overflow-y-auto text-xl transition focus:ring-2 focus:ring-orange-300"
       data-testid="editableArea"
       ref={editableRef}
       onPaste={onPaste}

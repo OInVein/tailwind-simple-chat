@@ -12,7 +12,7 @@ const NicknameInput = forwardRef(({ value, onChange }, ref) => {
   return (
     <div>
       <input
-        className="rounded-md outline-none p-4 w-full transition text-orange-400 focus:shadow-md tracking-wider"
+        className="rounded-lg outline-none p-4 w-full transition text-orange-400 focus:shadow-md tracking-wider"
         data-testid="nicknameInput"
         ref={ref}
         type="text"

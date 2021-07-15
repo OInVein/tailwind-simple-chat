@@ -84,13 +84,13 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
             const messageClassName = isOther
               ? `
                 relative break-all max-w-[50%] text-justify text-white bg-orange-400
-                border-solid border-2 border-orange-400 rounded-md ml-2 p-2
+                border-solid border-2 border-orange-400 rounded-lg ml-2 p-2
                 ${shouldShowDetail ? 'after:content after:absolute after:block after:w-0 after:h-0 after:left-[-12px] after:bottom-[-2px] after:border-8 after:common-message-border-angle' : ''}
               `
               : `
                 relative break-all max-w-[50%] text-justify text-orange bg-transparent
                 border-solid border-2 border-orange-400
-                rounded-md mr-2 p-2
+                rounded-lg mr-2 p-2
                 ${shouldShowDetail ? 'rounded-br-none before:content before:absolute before:block before:w-0 before:h-0 before:right-[-12px] before:bottom-[-2px] before:border-[6px] before:chat-message-border-angle-my-out after:content after:absolute after:block after:w-0 after:h-0 after:right-[-7px] after:border-[6px] after:bottom-[0px] after:chat-message-border-angle-my-in' : ''}
               `;
             return (
@@ -99,7 +99,6 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
                   <div className="flex flex-row gap-1 ml-2">
                     <div>{name}</div>
                     <div>({displayTime})</div>
-                    <div>:</div>
                   </div>
                 )}
                 <div
@@ -113,7 +112,7 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
           }
 
           const { className, textMessage } = (() => {
-            const defaultClass = 'my-2 p-2 border border-solid rounded-md';
+            const defaultClass = 'my-2 p-2 border border-solid rounded-lg';
             if (isNew) {
               const { JUST_COME } = DIALOG_MESSAGE;
               return {
