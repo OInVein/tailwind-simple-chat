@@ -14,7 +14,7 @@ import {
 
 const App = () => {
   const [state, dispatch] = useReducer(mainReducer, mainState);
-  const { nickName, webSocket, isLoading, isLast } = state;
+  const { nickName, webSocket, isLoading, isLast, hasLogin } = state;
   const nickNameRef = useRef();
 
   useEffect(() => {
@@ -50,10 +50,8 @@ const App = () => {
     });
   }, [webSocket]);
 
-  const { hasLogin } = state;
-
   const mainClassName = (() => {
-    const defaultClassName= 'w-full h-full md:w-3/4 xl:w-1/2 md:h-[85%] md:rounded-xl relative tracking-wider';
+    const defaultClassName= 'w-full h-full md:w-3/4 xl:w-[45%] md:h-[85%] md:rounded-xl relative tracking-wider';
     if (hasLogin) {
       const chatClassName = `
         ${defaultClassName}
@@ -99,7 +97,6 @@ const App = () => {
         });
       };
       const setIsLast = () => dispatch({ type: SET_IS_LAST });
-
       return <LoginPage setLoginStatus={setLoginStatus} setIsLast={setIsLast} isLast={isLast} />;
     }
 
@@ -112,8 +109,8 @@ const App = () => {
     };
     return (
       <ChatPage
-        emitMessage={emitMessage}
         id={id}
+        emitMessage={emitMessage}
         allMessages={allMessages}
       />
     );

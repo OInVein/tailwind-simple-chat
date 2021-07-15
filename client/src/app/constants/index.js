@@ -6,9 +6,8 @@ const CONNECTED = 'CONNECTED';
 const DISCONNECTED = 'DISCONNECTED';
 const SET_LOGIN_STATUS = 'SET_LOGIN_STATUS';
 const DIALOG_MESSAGE = {
-  CHAT_ROOM: '聊天室',
-  JUST_LEFT: '已離開',
-  JUST_COME: '剛進來',
+  JUST_LEFT: 'just left',
+  JUST_COME: 'just entered',
 };
 
 export {

@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 const scrollToBottom = (element) => {
   element.scrollTop = element.scrollHeight - element.clientHeight;
 };
@@ -21,4 +23,6 @@ const focusElement = (element) => {
   element.focus();
 };
 
-export { scrollToBottom, isMobile, focusElement };
+const formatDate = date => format(new Date(date), 'yyyy/MM/dd HH:mm');
+
+export { scrollToBottom, isMobile, focusElement, formatDate };

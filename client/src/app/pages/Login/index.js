@@ -40,7 +40,7 @@ const Login = ({ setLoginStatus, isLast, setIsLast }) => {
           CHAT ROOM
         </h1>
         <Greetings />
-        <form data-testid="loginForm" onSubmit={onSubmit} className="w-full h-1/3 md:h-5/12 flex justify-center flex-col text-2xl md:text-3xl gap-6 z-10">
+        <form data-testid="loginForm" onSubmit={onSubmit} className="w-full h-1/2 md:h-5/12 flex justify-center flex-col text-2xl md:text-3xl gap-6 z-10">
           <NicknameInput
             ref={nicknameInputRef}
             value={nickName}

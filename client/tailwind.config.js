@@ -41,14 +41,6 @@ module.exports = {
             backgroundColor: 'rgb(256, 256, 256)',
           },
         },
-        angleBackground: {
-          from: {
-            borderColor: 'transparent transparent rgb(254, 215, 170) rgb(254, 215, 170)',
-          },
-          to: {
-            borderColor: 'transparent transparent rgb(256, 256, 256) rgb(256, 256, 256)',
-          },
-        },
         shake: {
           '0%': {
             transform: 'rotate(-3deg)',
@@ -101,7 +93,6 @@ module.exports = {
       animation: {
         wave: 'wave 10s linear infinite',
         chatBackground: 'chatBackground .5s linear forwards',
-        angleBackground: 'angleBackground .5s linear forwards',
         shake: 'shake .5s linear forwards',
         slideFromLeft: 'slideFromLeft .5s linear forwards',
         rotate360: 'rotate360 3s linear infinite',
