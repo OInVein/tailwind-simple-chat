@@ -54,7 +54,7 @@ const App = () => {
   }, [webSocket]);
 
   const mainClassName = (() => {
-    const defaultClassName= 'w-full h-full md:w-3/4 xl:w-[45%] md:h-[85%] md:rounded-xl relative tracking-wider';
+    const defaultClassName= 'w-full h-full md:w-3/4 xl:w-[45%] md:h-[85%] md:rounded-xl relative tracking-wider shadow-xl';
     if (hasLogin) {
       const chatClassName = `
         ${defaultClassName}
