@@ -6,7 +6,7 @@ const Greetings = ({ text }) => {
   const isInit = text === defaultText;
 
   return (
-    <div className={`w-full h-1/5 md:h-1/3 xl:h-1/5 flex flex-col ${isInit ? 'justify-start' : 'items-center justify-center'} gap-6 font-medium text-2xl text-white`}>
+    <div data-testid="greetings" className={`w-full h-1/5 md:h-1/3 xl:h-1/5 flex flex-col ${isInit ? 'justify-start' : 'items-center justify-center'} gap-6 font-medium text-2xl text-white`}>
       <Greeting words={`Hello ${text}`} {...!isInit && ({ isDone: true })} />
       {isInit && <Greeting words="Welcome" />}
     </div>

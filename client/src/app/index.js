@@ -80,7 +80,7 @@ const App = () => {
         const serverUrl = (() => {
           const env = process.env;
           const { NODE_ENV } = env;
-          const isDEV = NODE_ENV === 'development';
+          const isDEV = ['development', 'test'].some(el => el === NODE_ENV);
           if (isDEV) {
             const { REACT_APP_DEV_SERVER_URL = ':5000' } = env;
             return REACT_APP_DEV_SERVER_URL;
