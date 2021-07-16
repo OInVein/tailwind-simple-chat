@@ -29,7 +29,7 @@
   }
 
   .chat-message-border-angle-my-in {
-    --color: rgb(256, 256, 256);
+    --color: rgb(255, 248, 234);
     border-color: transparent transparent var(--color) var(--color);
   }
 }

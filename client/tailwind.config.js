@@ -38,7 +38,7 @@ module.exports = {
             backgroundColor: 'rgb(254, 215, 170)',
           },
           to: {
-            backgroundColor: 'rgb(256, 256, 256)',
+            backgroundColor: 'rgb(255, 248, 234)',
           },
         },
         shake: {
@@ -82,11 +82,9 @@ module.exports = {
         rotate360: {
           from: {
             transform: 'rotate(0deg)',
-            opacity: '.6',
           },
           to: {
             transform: 'rotate(360deg)',
-            opacity: '1',
           },
         },
       },
