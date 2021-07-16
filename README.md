@@ -1,4 +1,4 @@
-# Tailwind Simple Chat
+# 📨📨 Tailwind Simple Chat 📭📭
 
 demo 👉👉👉 https://oiv-tailwind-simple-chat.herokuapp.com
 
