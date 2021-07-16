@@ -2,7 +2,7 @@ import { render, fireEvent, screen, waitForElementToBeRemoved } from '@testing-l
 import App from './app';
 
 describe('render App', () => {
-  it('WITH ALL E2E PROCESS', async () => {
+  it('WITH FULL E2E PROCESS', async () => {
     const { getByTestId } = render(<App />);
     const testContainer = getByTestId('container');
     expect(testContainer).toBeInTheDocument();
