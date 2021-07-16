@@ -1,6 +1,6 @@
 # Tailwind Simple Chat
 
-demo 👉👉👉 https://oiv-simple-chat-client.herokuapp.com/
+demo 👉👉👉 https://oiv-tailwind-simple-chat.herokuapp.com
 
 ## 1) Install
 
