@@ -96,7 +96,6 @@ module.exports = {
         shake: 'shake .5s linear forwards',
         slideFromLeft: 'slideFromLeft .5s linear forwards',
         rotate360: 'rotate360 3s linear infinite',
-        ['typing-1500']: 'typing 1.5s steps(44, end)',
         ['typing-3000']: 'typing 3s steps(44, end)',
       },
       scale: {
