@@ -79,7 +79,7 @@ const Dialog = forwardRef(({ id, allMessages }, ref) => {
         {(() => {
           if (isAliveMessage) {
             const messageClassName = (() => {
-              const defaultMessageClass = 'relative break-all max-w-[50%] text-justify border-solid border-2 border-orange-400 rounded-lg p-2';
+              const defaultMessageClass = 'relative break-words max-w-[50%] text-justify border-solid border-2 border-orange-400 rounded-lg p-2';
               if (isOther) {
                 const detailClass = shouldShowDetail ? 'after:content after:absolute after:block after:w-0 after:h-0 after:left-[-12px] after:bottom-[-2px] after:skew-x-[20deg] after:border-8 after:common-message-border-angle' : '';
                 return `
