@@ -1,21 +1,9 @@
-import MainWrapper from './MainWrapper';
-import NicknameInput from './NicknameInput';
-import SubmitButton from './SubmitButton';
-import Greetings from './Greetings';
-import Loading from './Loading';
-import Dialog from './Dialog';
-import SendMessageForm from './SendMessageForm';
-import EditableArea from './EditableArea';
-import SendButton from './SendButton';
-
-export {
-  MainWrapper as withMainWrapper,
-  NicknameInput,
-  SubmitButton,
-  Greetings,
-  Loading,
-  Dialog,
-  SendMessageForm,
-  EditableArea,
-  SendButton,
-};
+export { default as withMainWrapper } from './MainWrapper';
+export { default as NicknameInput } from './NicknameInput';
+export { default as SubmitButton } from './SubmitButton';
+export { default as Greetings } from './Greetings';
+export { default as Loading } from './Loading';
+export { default as Dialog } from './Dialog';
+export { default as SendMessageForm } from './SendMessageForm';
+export { default as EditableArea } from './EditableArea';
+export { default as SendButton } from './SendButton';

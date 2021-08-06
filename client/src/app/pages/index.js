@@ -1,7 +1,2 @@
-import Login from './Login';
-import Chat from './Chat';
-
-export {
-  Login as LoginPage,
-  Chat as ChatPage,
-};
+export { default as LoginPage } from './Login';
+export { default as ChatPage } from './Chat';
